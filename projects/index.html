@@ -285,14 +285,14 @@
 
                           </li>
                           <li class="nav-item">
-                            <a class=" b2 nav-social"  href="javascript:void(0)">搜索'一大白'</a>
+                            <a class=" b2 nav-social fb"  href="javascript:void(0)">搜索'一大白'</a>
                           </li>
                 
                       </ul>
                   </nav>
                   <div class="bottom-footer">
                       <p class="copyright navbar-left">© 一大白建筑事务所 2022</p>
-                      <ul class="nav media-list navbar-nav navbar-right">
+                      <ul class="nav address-list navbar-nav navbar-right">
                       
                         <li class="nav-item">
                             <a class=" b2"  href="mailto:general@fuu.com">general@fuu.com</a>
@@ -340,6 +340,7 @@
     </div>
 
   </footer>
+  <div style="position:fixed;right:30px;bottom:200px;display:block;"><p class="display-grid" style="display:inline-block" >toggle grid  </p><a class="closes" style="padding:2px 5px" >x</a></div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -348,10 +349,9 @@
   $(function(){
     var $img = $('.about-img');
     var $title = $('.about-title');
-    $(window).scroll(function () {
+    $img.length&&$(window).scroll(function () {
 
       var value = $('body,html').scrollTop();
-      console.log(value)
       
       $img.length&&$img.css({
         marginTop: 50 - Math.min(value * 0.5, 250) + "px"
@@ -360,8 +360,27 @@
         marginTop: 120 - Math.min(value * 0.15, 50) + "px"
       })
     });
-    $img.length&&$(window).scroll()
+    $img.length&&$(window).scroll();
+
+
+
+var grid = $('.display-grid');
+var row = $('.container .row');
+    grid.on('click',function(){
+        row.hasClass('gridimg')?row.removeClass('gridimg'):row.addClass('gridimg')
+    })
+
+
+
+if("ontouchstart" in window){
+    grid.closest('div').hide()
+}
+    $('.closes').on('click',function(){
+    grid.closest('div').hide()
   })
+  })
+
+  
 </script>
 
   <script type="text/x-mathjax-config">
