@@ -9,8 +9,27 @@
 	font-family: 'TaipeiSansTCBeta', sans-serif;
 	background-color: #fcfcf5;
 }
+.navbar-toggle .icon-bar{transition: .5s;}
+.navbar-toggle .icon-bar:nth-child(2){
+	transform: translateY(0) rotate(-45deg);
+	transform-origin: 17px 8px;
+}
 
+.navbar-toggle .icon-bar:nth-child(3){
+	opacity: 0;
+}
 
+.navbar-toggle .icon-bar:nth-child(4){
+	transform: translateY(0) rotate(45deg);
+	transform-origin: 16px -6px;
+	
+}
+
+.navbar-toggle.collapsed .icon-bar{
+	transform: translateY(0) rotate(0);;
+	opacity: 1;
+	
+}
 
 form {
 	max-width: 500px;

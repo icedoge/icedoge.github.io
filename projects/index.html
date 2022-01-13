@@ -180,10 +180,10 @@
                   </li> -->
         
           <div class="col-md-4 col-sm-4 spt15"><div class="post-preview column-3">
-            <a class="post-href" href="/cn/小树林与大棚屋/">
-              <div class="cover-img" style="background-image:url(/img/projects/小树林与大棚屋/day_view.jpg)"><img src="/img/projects/小树林与大棚屋/day_view.jpg" ></div>
+            <a class="post-href" href="/cn/开平塘口乡建设计大赛/">
+              <div class="cover-img" style="background-image:url(/img/projects/开平塘口乡建设计大赛/02.jpg)"><img src="/img/projects/开平塘口乡建设计大赛/02.jpg" ></div>
               <h2 class="post-title t4 spt3">
-                小树林与大棚屋
+                开平塘口乡建设计大赛
                 
                 
               </h2>
@@ -206,10 +206,10 @@
                   </li> -->
         
           <div class="col-md-4 col-sm-4 spt15"><div class="post-preview column-3">
-            <a class="post-href" href="/cn/开平塘口乡建设计大赛/">
-              <div class="cover-img" style="background-image:url(/img/projects/开平塘口乡建设计大赛/02.jpg)"><img src="/img/projects/开平塘口乡建设计大赛/02.jpg" ></div>
+            <a class="post-href" href="/cn/小树林与大棚屋/">
+              <div class="cover-img" style="background-image:url(/img/projects/小树林与大棚屋/day_view.jpg)"><img src="/img/projects/小树林与大棚屋/day_view.jpg" ></div>
               <h2 class="post-title t4 spt3">
-                开平塘口乡建设计大赛
+                小树林与大棚屋
                 
                 
               </h2>
@@ -379,9 +379,9 @@
   </div>
 
 </footer>
-<div style="position:fixed;right:30px;bottom:200px;display:block;">
+<!-- <div style="position:fixed;right:30px;bottom:200px;display:block;">
   <p class="display-grid" style="display:inline-block">toggle grid </p><a class="closes" style="padding:2px 5px">x</a>
-</div>
+</div> -->
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
   integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
@@ -393,15 +393,33 @@
     var mobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
     return mobile != null
   }
+
+  var defaultlogo = '<path d="M7.50363 1.68283L30.2069 4.54747C27.7699 10.2126 24.8838 16.5618 21.6558 23.4241H1.49645C3.97989 16.3186 5.98673 9.0554 7.50363 1.68283V1.68283ZM6.62714 0.50705C5.02814 8.65853 2.81273 16.6769 0 24.493H22.2544C25.9599 16.8112 29.1238 9.86343 31.7461 3.6496L6.62714 0.50705Z" fill="#050707"/>'
+  var randomlogo = ['<path d="M6.90741 0.50705C5.30842 8.65853 3.09301 16.6769 0.280273 24.493H22.5346C26.2401 16.8112 29.4041 9.86343 32.0264 3.6496L6.90741 0.50705Z" fill="#D2889F"/>']
+  
   $(function () {
     var $img = $('.about-img');
     var $title = $('.about-title');
+    var $brand =  $('#top .navbar-brand');
 
     var grid = $('.display-grid');
     var row = $('.container .row');
+    var colors= ['ABDAFC','EF6351','2732C4','B4ADEA','69995D','54DDCB','D2889F','FBED65',]
     grid.on('click', function () {
       row.hasClass('gridimg') ? row.removeClass('gridimg') : row.addClass('gridimg')
     })
+
+    $brand.on("mouseenter",function(){
+      var random = Math.floor(Math.random() * 7)
+      $('.fuu-logo').children().eq(0).attr('fill','#'+colors[random]).attr("d","M6.90741 0.50705C5.30842 8.65853 3.09301 16.6769 0.280273 24.493H22.5346C26.2401 16.8112 29.4041 9.86343 32.0264 3.6496L6.90741 0.50705Z")
+      console.log('enter')
+
+})
+$brand.on("mouseleave",function(){
+      $('.fuu-logo').children().eq(0).attr('fill','#050707').attr("d","M7.50363 1.68283L30.2069 4.54747C27.7699 10.2126 24.8838 16.5618 21.6558 23.4241H1.49645C3.97989 16.3186 5.98673 9.0554 7.50363 1.68283V1.68283ZM6.62714 0.50705C5.02814 8.65853 2.81273 16.6769 0 24.493H22.2544C25.9599 16.8112 29.1238 9.86343 31.7461 3.6496L6.62714 0.50705Z")
+
+
+})
 
 
 
