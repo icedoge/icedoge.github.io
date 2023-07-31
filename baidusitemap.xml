@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/cn/%E9%BE%99%E6%BD%AD%E5%B2%9B%E5%85%AC%E5%9B%AD/</loc>
+    <lastmod>2023-04-16</lastmod>
+  </url>
+  <url>
+    <loc>http://yoursite-url/cn/%E6%B5%AE%E5%B1%B1%E5%B0%8F%E6%B8%B8%E5%9B%AD/</loc>
+    <lastmod>2023-02-16</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/cn/WF%E4%BF%AE%E9%81%93%E9%99%A2%E5%AE%B6%E5%85%B7/</loc>
     <lastmod>2020-04-16</lastmod>
   </url>
