@@ -220,7 +220,7 @@ p,h1,h2,h3,h4,h5,h6{margin-bottom: 0;}
 .t6{font-size:14px;line-height:16px;}
 
 /* .b1{font-size:16px;line-height:20px} */
-.b1{font-size:16px;line-height:28px}
+.b1{font-size:16px;line-height: 18px;}
 .b2{font-size:14px;line-height:16px}
 
 .l1{font-size:16px;line-height:20px}
@@ -240,7 +240,7 @@ p,h1,h2,h3,h4,h5,h6{margin-bottom: 0;}
 .spt12{margin-top:96px}
 .spt13{margin-top:104px}
 .spt14{margin-top:112px}
-.spt15{margin-top:120px}
+.spt15{margin-top: 80px;}
 .spt16{margin-top:240px}
 
 .fb{font-weight:bold}
@@ -319,10 +319,15 @@ p,h1,h2,h3,h4,h5,h6{margin-bottom: 0;}
 	.address-list .nav-item:nth-child(2){margin-top:-14px;}
 	.address-list .nav-item a{padding-left:0}
 
-.copyright{position: absolute;
+.copyright{
+    position: absolute;
     width: 100%;
-    margin-top: 75px;
-    border-top: 1px solid #050707;border-bottom: 1px solid #050707;padding-top:21px;padding-bottom:21px;}
+    margin-top: 94px;
+    border-top: 1px solid #050707;
+    border-bottom: 1px solid #050707;
+    padding-top:21px;
+    padding-bottom:21px;
+    }
 
 	#bottom .navbar-header{margin-top:75px;}
 	.footer-navbar-brand{    display: block;
@@ -355,12 +360,12 @@ p,h1,h2,h3,h4,h5,h6{margin-bottom: 0;}
 
 
 .project-panel .post-preview {
-    box-shadow: rgba(5,5,7,0.5) 0 0 5px;
+    box-shadow: rgb(5,5,7,.2) 0 0 5px;
     transition: .3s;
 }
 
 .project-panel .post-preview:hover {
-    box-shadow: rgba(5,5,7,0.5) 0px 0px 6px;
+    box-shadow: rgba(5,5,7,0.2) 0px 0px 6px;
 }
 
 .tcenter{text-align: center;}
@@ -372,8 +377,10 @@ p,h1,h2,h3,h4,h5,h6{margin-bottom: 0;}
 
 .introduce p{
 	text-indent: 2em;
-    line-height: 30px;
-    text-align: justify;}
+    line-height: 24px;
+    margin-bottom: 24px;
+
+}
 
 	.col-md-13 {
 		position: relative;
